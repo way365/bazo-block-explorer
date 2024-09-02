@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/julienschmidt/httprouter"
-	"github.com/julwil/bazo-block-explorer/data"
-	"github.com/julwil/bazo-block-explorer/utilities"
+	"github.com/way365/bazo-block-explorer/data"
+	"github.com/way365/bazo-block-explorer/utilities"
 	"html/template"
 	"net/http"
 )

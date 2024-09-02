@@ -4,10 +4,10 @@ import (
 	"bufio"
 	"errors"
 	"fmt"
-	"github.com/julwil/bazo-block-explorer/utilities"
-	"github.com/julwil/bazo-miner/miner"
-	"github.com/julwil/bazo-miner/p2p"
-	"github.com/julwil/bazo-miner/protocol"
+	"github.com/way365/bazo-block-explorer/utilities"
+	"github.com/way365/bazo-miner/miner"
+	"github.com/way365/bazo-miner/p2p"
+	"github.com/way365/bazo-miner/protocol"
 	"log"
 	"net"
 	"time"
@@ -147,7 +147,7 @@ func Connect(connectionString string) (conn net.Conn, err error) {
 
 func reqBlock(blockHash []byte) (block *protocol.Block) {
 	//request data using modified code from bazo's p2p messaging system
-	conn, err := Connect("bazo-miner:8000") // Docker will resolve the correct IP for bazo-miner.
+	conn, err := Connect("127.0.0.1:8000") // Docker will resolve the correct IP for bazo-miner.
 	if err != nil {
 		var emptyBlock *protocol.Block
 		return emptyBlock
@@ -170,7 +170,7 @@ func reqBlock(blockHash []byte) (block *protocol.Block) {
 
 func reqTx(txType uint8, txHash [32]byte) interface{} {
 	//request data using modified code from bazo's p2p messaging system
-	conn, _ := Connect("bazo-miner:8000") // Docker will resolve the correct IP for bazo-miner.
+	conn, _ := Connect("127.0.0.1:8000") // Docker will resolve the correct IP for bazo-miner.
 	packet := p2p.BuildPacket(txType, txHash[:])
 	conn.Write(packet)
 

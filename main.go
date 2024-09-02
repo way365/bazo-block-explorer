@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"github.com/julwil/bazo-block-explorer/data"
-	"github.com/julwil/bazo-block-explorer/router"
+	"github.com/way365/bazo-block-explorer/data"
+	"github.com/way365/bazo-block-explorer/router"
 	"net/http"
 	"os"
 )

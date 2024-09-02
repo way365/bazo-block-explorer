@@ -3,14 +3,14 @@ package data
 import (
 	"database/sql"
 	"fmt"
-	"github.com/julwil/bazo-block-explorer/utilities"
 	"github.com/lib/pq"
+	"github.com/way365/bazo-block-explorer/utilities"
 	"strings"
 	"time"
 )
 
 const (
-	host   = "psql" // Docker will resolve the correct IP for psql.
+	host   = "127.0.0.1" // Docker will resolve the correct IP for psql.
 	port   = 5432
 	dbname = "blockexplorerdb"
 )
